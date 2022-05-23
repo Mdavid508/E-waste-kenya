@@ -1,0 +1,16 @@
+.bg-custom{
+    background-color: #7ED957;
+}
+h1{
+    text-align: center;
+}
+.dflex{
+    display: flex;
+}
+.div{
+    text-align: left;
+}
+.my-container{
+    border: 0% ;
+    margin: 0%;
+}
