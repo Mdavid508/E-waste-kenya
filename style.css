@@ -14,3 +14,32 @@ h1{
     border: 0% ;
     margin: 0%;
 }
+.carousel-item1{
+    width: auto;
+    height: 100px;
+    background-color: white;
+}
+.carousel-main img{
+    height: 387px !important;
+    object-fit: fill;
+    overflow-y: hidden !important;
+}
+.m-bg-caption{
+    background-color: #7ad957cc;
+}
+.main{
+    color: black;
+    text-align: center;
+}
+.footer{
+    
+    background-color: #7ED957
+
+}
+.m-container{
+    width: 428px; 
+    height: 435px;
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 25px;
+}
