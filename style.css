@@ -31,62 +31,105 @@ h1 {
     border: 0%;
     margin: 0%;
 }
-.carousel-item1{
+
+.carousel-item1 {
     width: auto;
     height: 100px;
     background-color: white;
 }
-.carousel-main img{
+
+.carousel-main img {
     height: 387px !important;
     object-fit: fill;
     overflow-y: hidden !important;
 }
-.m-bg-caption{
+
+.m-bg-caption {
     background-color: #7ad957cc;
 }
-.main{
+
+.main {
     color: black;
     text-align: center;
 }
-.footer{
-    
-    background-color: #7ED957
 
+.footer {
+    background-color: #7ED957
 }
-.m-container{    
+
+.m-container {
     padding: 10px;
     margin-top: 25px;
     border-radius: 25px;
 }
+
 @media only screen and (min-width:768px) {
-    .m-container{
+    .m-container {
         width: 428px;
         height: 435px;
         padding: 10px;
         margin-top: 25px;
         border-radius: 25px;
     }
-    
 }
-.m-container-view{
+
+.m-container-view {
     background-color: white;
     padding-left: 0%;
     padding-right: 0%;
     margin-top: 10px;
-        }
+}
 
 .active {
     color: #fff !important;
 }
-.m-border-radius{
+
+.m-border-radius {
     border-radius: 10px;
 }
-.m-height{
+
+.m-height {
     height: 330px;
 }
-.body-view{
+
+.body-view {
     background-color: #dee2e6;
 }
-.simmilar-gadget-height, .simmilar-gadget-height img{
+
+.simmilar-gadget-height,
+.simmilar-gadget-height img {
     max-height: 350px;
+}
+
+.input-wrappper {
+    position: relative;
+}
+
+.input-wrappper input {
+    width: 100% !important;
+    padding-right: 60px;
+    padding-left: 15px;
+    border-top-left-radius: 60px;
+    border-radius: 60px;
+    background-color: #D9D9D9;
+    height: 65px;
+    font-size: 1.75rem;
+}
+
+.input-wrappper input:focus,
+.input-wrappper i:focus {
+    box-shadow: none;
+    border: 3px solid #D9D9D9;
+}
+
+.input-wrappper i {
+    background-image: url('/images/search-icon.svg');
+    position: absolute;
+    top: 10%;
+    right: 5px;
+    height: 50px;
+    width: 50px;
+    padding: 10px 2px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
