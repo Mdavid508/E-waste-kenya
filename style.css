@@ -53,17 +53,40 @@ h1 {
     background-color: #7ED957
 
 }
-.m-container{
-    width: 428px; 
-    height: 435px;
+.m-container{    
     padding: 10px;
     margin-top: 25px;
     border-radius: 25px;
 }
+@media only screen and (min-width:768px) {
+    .m-container{
+        width: 428px;
+        height: 435px;
+        padding: 10px;
+        margin-top: 25px;
+        border-radius: 25px;
+    }
+    
+}
+.m-container-view{
+    background-color: white;
+    padding-left: 0%;
+    padding-right: 0%;
+    margin-top: 10px;
+        }
 
 .active {
     color: #fff !important;
 }
 .m-border-radius{
     border-radius: 10px;
+}
+.m-height{
+    height: 330px;
+}
+.body-view{
+    background-color: #dee2e6;
+}
+.simmilar-gadget-height, .simmilar-gadget-height img{
+    max-height: 350px;
 }
