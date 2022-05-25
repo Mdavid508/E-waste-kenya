@@ -2,7 +2,9 @@
     --color-primary: #7ED957;
     --bg-primary: var(--color-primary)
 }
-
+html,body{
+    font-size: 1.125rem;
+}
 .m-bg-primary {
     background-color: var(--bg-primary);
 }
