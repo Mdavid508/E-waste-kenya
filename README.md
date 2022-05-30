@@ -1,4 +1,4 @@
-# e-waste-front-end
+# next
 
 ## Project setup
 ```
