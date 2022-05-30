@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class GadgetController extends Controller
 {
@@ -13,7 +14,11 @@ class GadgetController extends Controller
      */
     public function index()
     {
-        //
+        // 
+        return response()->json([
+            'success'=>true,
+            'message'=>'You hit the users index'
+        ]);
     }
 
     /**
@@ -36,6 +41,7 @@ class GadgetController extends Controller
     public function show($id)
     {
         //
+        echo "you hit user gadget show id: ".$id;
     }
 
     /**
@@ -59,5 +65,36 @@ class GadgetController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    //custom methods appear here
+    //all user gadgets
+    public function getUserGadgets(Request $request, $id){
+        $user = User::find($id);
+        if(!$user){
+            return response()->json([
+                'success'=>false,
+                'message'=>'No user with the supplied Id was found'
+            ]);
+        }
+
+        $userGadgets = User::with('gadgets')->get();
+        return response()->json([
+            'success'=>true,
+            'data'=>$userGadgets
+        ]);
+    }
+    //single user gadget
+    public function getUserGadget(Request $request,$userId, $gadgetId){
+        $user = User::find($userId);
+        if(!$user){
+            return response()->json([
+                'success'=>false,
+                'message'=>'No user with the supplied Id was found'
+            ]);
+        }
+
+        $userGadget = User::with('gadget')->get();
     }
 }

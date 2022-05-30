@@ -38,6 +38,7 @@ class UserController extends Controller
                 'message'=>'Passwords did not match'
             ]);
         }
+        
         if(User::where('email', $request->email)->count() != 0){
             return response()->json([
                 'success'=>false,
@@ -56,7 +57,7 @@ class UserController extends Controller
 
         return response()->json([
             'success'=> true,
-            'message'=>'User created successfully',
+            'message'=>'User registered successfully',
             'data'=>$user
         ]);
         
@@ -116,13 +117,14 @@ class UserController extends Controller
                 'success'=>false,
                 'message'=>'Unable to update your info, Please try again.'
             ]);
-        }else{
-            return response()->json([
-                'success'=>true,
-                'message'=>'User updated successfully',
-                'data'=>$user
-            ]);
         }
+
+        return response()->json([
+            'success'=>true,
+            'message'=>'User updated successfully',
+            'data'=>$user
+        ]);
+        
 
     }
 
@@ -149,9 +151,28 @@ class UserController extends Controller
     }
 
     //custom methods here
-     public function getUserGadgets()
-    {
-        echo "I will be getting user gadgets in this method";
+     public function login(Request $request){
+         $email = $request->email;
+         $password = $request->password;
+         $user = User::where('email',$email);
+         if(!$user){
+             return response()->json([
+                 'success'=>false,
+                 'message'=>'No user with the given email was found'
+             ]);
+         }
+         if($user->password != $password){
+             return response()->json([
+                 'success'=>false,
+                 'message'=>'Wrong password. Please try again'
+             ]);
+         }
+
+         return response()->json([
+             'success'=>true,
+             'message'=>'Login successful',
+             'data'=>$user
+         ]);
     }
     public function getCompanyGadgets()
     {
