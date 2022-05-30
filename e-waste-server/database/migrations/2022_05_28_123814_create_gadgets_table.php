@@ -19,8 +19,9 @@ class CreateGadgetsTable extends Migration
             $table->bigInteger('category_id');
             $table->string('name', 70);
             $table->string('location', 30);
-            $table->longText('description');
+            $table->longText('description');            
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

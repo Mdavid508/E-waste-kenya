@@ -135,3 +135,9 @@ h1 {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+@media (max-width: 600px) {
+    .contact-link{
+        display: none;
+    }
+}
