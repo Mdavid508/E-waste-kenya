@@ -3232,16 +3232,36 @@
         },
         {
             "name": "symfony/event-dispatcher",
+<<<<<<< HEAD
+            "version": "v5.4.9",
+||||||| 9c5742a
+            "version": "v5.4.3",
+=======
             "version": "v6.0.9",
+>>>>>>> origin/master
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
+<<<<<<< HEAD
+                "reference": "8e6ce1cc0279e3ff3c8ff0f43813bc88d21ca1bc"
+||||||| 9c5742a
+                "reference": "dec8a9f58d20df252b9cd89f1c6c1530f747685d"
+=======
                 "reference": "5c85b58422865d42c6eb46f7693339056db098a8"
+>>>>>>> origin/master
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/8e6ce1cc0279e3ff3c8ff0f43813bc88d21ca1bc",
+                "reference": "8e6ce1cc0279e3ff3c8ff0f43813bc88d21ca1bc",
+||||||| 9c5742a
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/dec8a9f58d20df252b9cd89f1c6c1530f747685d",
+                "reference": "dec8a9f58d20df252b9cd89f1c6c1530f747685d",
+=======
                 "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/5c85b58422865d42c6eb46f7693339056db098a8",
                 "reference": "5c85b58422865d42c6eb46f7693339056db098a8",
+>>>>>>> origin/master
                 "shasum": ""
             },
             "require": {
@@ -3295,7 +3315,13 @@
             "description": "Provides tools that allow your application components to communicate with each other by dispatching events and listening to them",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
+                "source": "https://github.com/symfony/event-dispatcher/tree/v5.4.9"
+||||||| 9c5742a
+                "source": "https://github.com/symfony/event-dispatcher/tree/v5.4.3"
+=======
                 "source": "https://github.com/symfony/event-dispatcher/tree/v6.0.9"
+>>>>>>> origin/master
             },
             "funding": [
                 {
@@ -3311,7 +3337,13 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2022-05-05T16:45:39+00:00"
+||||||| 9c5742a
+            "time": "2022-01-02T09:53:40+00:00"
+=======
             "time": "2022-05-05T16:45:52+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -4777,16 +4809,36 @@
         },
         {
             "name": "symfony/string",
+<<<<<<< HEAD
+            "version": "v5.4.9",
+||||||| 9c5742a
+            "version": "v5.4.8",
+=======
             "version": "v6.0.9",
+>>>>>>> origin/master
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
+<<<<<<< HEAD
+                "reference": "985e6a9703ef5ce32ba617c9c7d97873bb7b2a99"
+||||||| 9c5742a
+                "reference": "3c061a76bff6d6ea427d85e12ad1bb8ed8cd43e8"
+=======
                 "reference": "df9f03d595aa2d446498ba92fe803a519b2c43cc"
+>>>>>>> origin/master
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
+                "url": "https://api.github.com/repos/symfony/string/zipball/985e6a9703ef5ce32ba617c9c7d97873bb7b2a99",
+                "reference": "985e6a9703ef5ce32ba617c9c7d97873bb7b2a99",
+||||||| 9c5742a
+                "url": "https://api.github.com/repos/symfony/string/zipball/3c061a76bff6d6ea427d85e12ad1bb8ed8cd43e8",
+                "reference": "3c061a76bff6d6ea427d85e12ad1bb8ed8cd43e8",
+=======
                 "url": "https://api.github.com/repos/symfony/string/zipball/df9f03d595aa2d446498ba92fe803a519b2c43cc",
                 "reference": "df9f03d595aa2d446498ba92fe803a519b2c43cc",
+>>>>>>> origin/master
                 "shasum": ""
             },
             "require": {
@@ -4842,7 +4894,13 @@
                 "utf8"
             ],
             "support": {
+<<<<<<< HEAD
+                "source": "https://github.com/symfony/string/tree/v5.4.9"
+||||||| 9c5742a
+                "source": "https://github.com/symfony/string/tree/v5.4.8"
+=======
                 "source": "https://github.com/symfony/string/tree/v6.0.9"
+>>>>>>> origin/master
             },
             "funding": [
                 {
@@ -4862,16 +4920,36 @@
         },
         {
             "name": "symfony/translation",
+<<<<<<< HEAD
+            "version": "v5.4.9",
+||||||| 9c5742a
+            "version": "v5.4.8",
+=======
             "version": "v6.0.9",
+>>>>>>> origin/master
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
+<<<<<<< HEAD
+                "reference": "1639abc1177d26bcd4320e535e664cef067ab0ca"
+||||||| 9c5742a
+                "reference": "f5c0f6d1f20993b2606f3a5f36b1dc8c1899170b"
+=======
                 "reference": "9ba011309943955a3807b8236c17cff3b88f67b6"
+>>>>>>> origin/master
             },
             "dist": {
                 "type": "zip",
+<<<<<<< HEAD
+                "url": "https://api.github.com/repos/symfony/translation/zipball/1639abc1177d26bcd4320e535e664cef067ab0ca",
+                "reference": "1639abc1177d26bcd4320e535e664cef067ab0ca",
+||||||| 9c5742a
+                "url": "https://api.github.com/repos/symfony/translation/zipball/f5c0f6d1f20993b2606f3a5f36b1dc8c1899170b",
+                "reference": "f5c0f6d1f20993b2606f3a5f36b1dc8c1899170b",
+=======
                 "url": "https://api.github.com/repos/symfony/translation/zipball/9ba011309943955a3807b8236c17cff3b88f67b6",
                 "reference": "9ba011309943955a3807b8236c17cff3b88f67b6",
+>>>>>>> origin/master
                 "shasum": ""
             },
             "require": {
@@ -4937,7 +5015,13 @@
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
             "support": {
+<<<<<<< HEAD
+                "source": "https://github.com/symfony/translation/tree/v5.4.9"
+||||||| 9c5742a
+                "source": "https://github.com/symfony/translation/tree/v5.4.8"
+=======
                 "source": "https://github.com/symfony/translation/tree/v6.0.9"
+>>>>>>> origin/master
             },
             "funding": [
                 {
@@ -4953,7 +5037,13 @@
                     "type": "tidelift"
                 }
             ],
+<<<<<<< HEAD
+            "time": "2022-05-06T12:33:37+00:00"
+||||||| 9c5742a
+            "time": "2022-04-22T08:14:12+00:00"
+=======
             "time": "2022-05-06T14:27:17+00:00"
+>>>>>>> origin/master
         },
         {
             "name": "symfony/translation-contracts",

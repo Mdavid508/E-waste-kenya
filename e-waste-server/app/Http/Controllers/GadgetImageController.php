@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Categories_company;
-use App\Models\Category;
-use App\Models\Company;
-class CompanyCategoryController extends Controller
+
+class GadgetImageController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,13 +13,7 @@ class CompanyCategoryController extends Controller
      */
     public function index()
     {
-        $companyCategories = Company::with('categories')->get();
-        
-        return response()->json([
-            'success'=>true,
-            'message'=>'',
-            'data'=>$companyCategories
-        ]);
+        //
     }
 
     /**
@@ -30,18 +22,9 @@ class CompanyCategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, $companyId, $categoryId)
+    public function store(Request $request)
     {
-        $category =  Category::find($categoryId);
-        if($category){
-            return response()->json([
-                'success'=>false,
-                'message'=>'No category with the given Id was found'
-            ]);
-        }
-
-        $Categories_company = new Categories_company();
-        
+        //
     }
 
     /**

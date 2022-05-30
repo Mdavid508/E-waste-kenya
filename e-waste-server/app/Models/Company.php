@@ -13,7 +13,7 @@ class Company extends Model
     public function gadgets(){
         return $this->hasMany(Gadget::class);
     }
-    public function company_categories(){
-        return $this->hasMany(Categories_company::class);
+    public function categories(){
+        return $this->hasManyThrough(Category::class, Categories_company::class);
     }
 }

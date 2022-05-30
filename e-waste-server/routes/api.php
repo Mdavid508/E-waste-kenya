@@ -9,6 +9,10 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\GadgetController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\UserGadgetController;
+use App\Http\Controllers\CompanyCategoryController;
+use App\Http\Controllers\CompanyGadgetController;
+use App\Http\Controllers\GadgetImageController;
 
 
 
@@ -65,5 +69,16 @@ Route::delete('/categories_company/{id}',[Categories_companyController::class, '
 
 
 //other custom routes will appear here
-Route::get('/users/{id}/gadgets', [UserController::class, 'getUserGadgets']);
-Route::get('/companies/{id}/gadgets', [UserController::class, 'getCompanyGadgets']);
+//routes needing api resources
+Route::resource('users.gadgets', UserGadgetController::class);
+Route::resource('gadgets.images', GadgetImageController::class);
+Route::resource('companies.gadgets', CompanyGadgetController::class);
+Route::resource('companies.categories', CompanyCategoryController::class);
+
+
+//user login
+Route::post('/auth/login', [UserController::class, 'login']);
+Route::post('/auth/register', [UserController::class,'store']);
+
+//get user gadgets
+// Route::get('/users/gadgets', [GadgetController::class,'userGadgets']);

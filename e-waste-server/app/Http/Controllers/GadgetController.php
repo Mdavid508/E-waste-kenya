@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 use App\Models\Gadget;
 
 class GadgetController extends Controller
@@ -133,5 +134,36 @@ class GadgetController extends Controller
             'success'=>true,
             'message'=>'Gadget deleted successfully'
         ]);
+    }
+
+
+    //custom methods appear here
+    //all user gadgets
+    public function getUserGadgets(Request $request, $id){
+        $user = User::find($id);
+        if(!$user){
+            return response()->json([
+                'success'=>false,
+                'message'=>'No user with the supplied Id was found'
+            ]);
+        }
+
+        $userGadgets = User::with('gadgets')->get();
+        return response()->json([
+            'success'=>true,
+            'data'=>$userGadgets
+        ]);
+    }
+    //single user gadget
+    public function getUserGadget(Request $request,$userId, $gadgetId){
+        $user = User::find($userId);
+        if(!$user){
+            return response()->json([
+                'success'=>false,
+                'message'=>'No user with the supplied Id was found'
+            ]);
+        }
+
+        $userGadget = User::with('gadget')->get();
     }
 }
