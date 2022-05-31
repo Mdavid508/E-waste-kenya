@@ -151,29 +151,33 @@ class UserController extends Controller
     }
 
     //custom methods here
-     public function login(Request $request){
-         $email = $request->email;
-         $password = $request->password;
-         $user = User::where('email',$email);
-         if(!$user){
-             return response()->json([
-                 'success'=>false,
-                 'message'=>'No user with the given email was found'
-             ]);
-         }
-         if($user->password != $password){
-             return response()->json([
-                 'success'=>false,
-                 'message'=>'Wrong password. Please try again'
-             ]);
-         }
+    public function login(Request $request){
+         
+        $email = $request->email;
+        $password = $request->password;
+        $user = User::where('email',$email)->first();
 
-         return response()->json([
-             'success'=>true,
-             'message'=>'Login successful',
-             'data'=>$user
-         ]);
-    }
+        if(!$user){
+            return response()->json([
+                'success'=>false,
+                'message'=>'No user with the given email was found'
+            ]);
+        }
+        
+        if($user->password != $password){
+            return response()->json([
+                'success'=>false,
+                'message'=>'Wrong password. Please try again'
+            ]);
+        }
+
+        return response()->json([
+            'success'=>true,
+            'message'=>'Login successful',
+            'data'=>$user
+        ]);
+   }
+    
     public function getCompanyGadgets()
     {
         echo "I will be getting company gadgets in this method";
