@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
     <!--Custom CSS-->
     <link rel="stylesheet" href="style.css" />
+    
     <title>E-Waste Kenya</title>
     <!-- Title bar icon-->
     <link rel="shortcut icon" href="/images/E-waste Kenya Logo.png" type="image/x-icon">
@@ -36,7 +37,8 @@
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link text-light" href="/login.html"> Login</a>
+              <a class="nav-link text-light" href="#" data-toggle="modal" data-target="#loginModalCenter"> Login</a>
+              
             </li>
           </ul>
         </div>
@@ -81,7 +83,7 @@
               production and consumption of E-Waste in alignment to the UN SDG
               Goal 12. Join Us to become a part of the amazing journey
             </p> 
-            <a href="/register.html" class="btn btn-lg btn-primary">sign up</a>
+            <a href="#" data-toggle="modal" data-target="#registerModalCenter" class="btn btn-lg btn-primary">sign up</a>
           </div>
         </div>
         <div class="carousel-item  carousel-main">
@@ -146,21 +148,21 @@
         <div class="carousel-item active">
           <div class="container">
             <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center">
+              <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center">
                 <img
                   src="images/Weee.png"
                   style="width: 165px; height: 100px; align-items: center"
                   alt="Weee"
                 />
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center">
+              <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center">
                 <img
                   src="images/Ewik-Kenya-1.png"
                   style="height: 100px; width: 94px; align-items: center"
                   alt="E-wik"
                 />
               </div>
-              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 d-flex justify-content-center">
+              <div class="col-lg-4 col-md-4 col-sm-12 d-flex justify-content-center">
                 <img
                   src="images/Nyericounty.png"
                   style="width: 105px; height: 100px; align-items: center"
@@ -193,40 +195,108 @@
             </div>
           </div>
         </div>  
-      </div>    
+      </div>  
+      </div>  
+      <!--Login Modal-->
+      
 
 <!--Footer for the company-->
 <div class="container-fluid">
-  <div class="row m-bg-primary d-flex align-items-center p-4 justify-content-evenly">
-      <div class="col-4 d-flex">
+  <div class="row m-bg-primary p-4">
+      <div class="col-4 d-flex justify-content-center">
           <img src="/images/phone-logo.png" alt="Phone icon" />
-          <a class="font-weight-bold text-dark text-docoration-none ml-1 contact-link"   href="tel:0769798443" target="_blank">0769798443</a
+          <a class="font-weight-bold text-dark text-docoration-none ml-1" href="tel:0769798443" target="_blank">0769798443</a
       >
     </div>
-    <div class="col-4 d-flex">
-      <img src="/images/twitter.jpg" alt="Twitter icon" height="30px" width="30px" />
+    <div class="col-4 d-flex justify-content-center">
+      <img src="/images/twitter.jpg" alt="Twitter icon" />
       <a
-        class="font-weight-bold text-dark text-docoration-none ml-1 contact-link"
+        class="font-weight-bold text-dark text-docoration-none ml-1"
         href="https://twitter.com/e-wastekenya" target="_blank"
         >e-wastekenya</a
       >
       
     </div>
-    <div class="col-4 d-flex">
-      <img src="/images/linkedin.jpg" class="img-responsive" alt="LinkedIn icon" height="30px" width="30px"/>
+    <div class="col-4 d-flex justify-content-center">
+      <img src="/images/linkedin.jpg" alt="LinkedIn icon" />
       <a
-        class="font-weight-bold text-dark text-docoration-none ml-1 contact-link"
+        class="font-weight-bold text-dark text-docoration-none ml-1"
         href="https://linkedin.com/e-wastekenya" target="_blank"
         >E-waste Kenya</a
       >
     </div>
   </div>
 </div>
+<!--Login Modal-->
+
+<div class="modal fade" id="loginModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5  class="modal-title"  id="exampleModalLongTitle">Login as</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-12" style="text-align: center; margin-bottom: 10px">
+                <a style="padding-right:10px" href="/login.html"><button style="background-color: #2575fc; color:white; width:150px" type="button" class="btn btn-primary"><i class="fa fa-user"></i>
+                        User</button></a>
+                <a href="/companylogin.html"><button style="background-color: #02060b; color:white;width:150px" type="button" class="btn btn-primary"><i class="fa fa-graduation-cap"></i>
+                        Company</button></a>
+            </div>
+        </div>
+    </div>
+          
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="registerModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5  class="modal-title"  id="exampleModalLongTitle">Register as</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+            <div class="col-12" style="text-align: center; margin-bottom: 10px">
+                <a style="padding-right:10px" href="/register.html"><button style="background-color: #2575fc; color:white; width:150px" type="button" class="btn btn-primary"><i class="fa fa-user"></i>
+                        User</button></a>
+                <a href="/companyregister.html"><button style="background-color: #02060b; color:white;width:150px" type="button" class="btn btn-primary"><i class="fa fa-graduation-cap"></i>
+                        Company</button></a>
+            </div>
+        </div>
+    </div>
+          
+    </div>
+  </div>
+</div>
 
  <!-- JS files -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+     /*(function(){
+        Swal.fire({
+      position: 'top-end',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+    })
+      })()*/
+
+    
+    </script>
 </body>
 
 </html>
