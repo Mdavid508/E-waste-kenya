@@ -8,7 +8,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="style.css">
     <title>E-Waste Kenya </title>
     <link rel="shortcut icon" href="./images/E-waste Kenya Logo.png" type="image/x-icon">
 </head>
@@ -27,7 +27,7 @@
             <div class="collapse navbar-collapse" id="navmenu">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="home.html">Home</a>
+                        <a class="nav-link text-light" href="./home.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-light" href="#">About Us</a>
@@ -35,7 +35,7 @@
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="login.html"> Login</a>
+                        <a class="nav-link text-light" href="./login.html"> Login</a>
                     </li>
                 </ul>
             </div>
@@ -51,21 +51,22 @@
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <form id="loginForm">
+                <form id="companyLoginForm" onsubmit="return false">
                     <div class="form-group">
                         <label for="username" class="d-flex justify-content-center">Username</label>
-                        <input type="text" name="email" class="form-control" id="username" placeholder="Enter username" required>
+                        <input type="text" class="form-control" id="username" name="email" placeholder="Enter username">
 
                     </div>
                     <div class="form-group">
                         <label for="InputPassword" class="d-flex justify-content-center">Password</label>
-                        <input type="password" name="password" class="form-control" id="InputPassword1" placeholder="Enter Password" required>
+                        <input type="password" class="form-control" id="InputPassword1" name="password" placeholder="Enter Password">
                     </div>
 
 
                     <div class="d-flex flex-column align-items-center justify-content-center pt-4">
-                        <button type="button" class="btn btn-primary bg-white text-dark " onclick="login()">Login</button>
-                        <p class="pt-2">Dont have an account yet ? <a class="text-decoration-none text-white" href="register.html"> Register</a></p>
+                        <button type="submit" class="btn btn-primary bg-white text-dark " onclick="login()">Login</button>
+
+                        <p class="pt-2">Dont have an account yet ? <a class="text-decoration-none text-white" href="./companyregister.html"> Register</a></p>
                     </div>
                 </form>
             </div>
@@ -73,8 +74,6 @@
 
 
     </div>
-
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -85,12 +84,21 @@
     <script>
         const URL = 'http://localhost:8000';
 
-        function login(e) {
-            console.log("Attemptig to login")
-            const form = document.querySelector('#loginForm');
+        function login() {
+            const form = document.querySelector('#companyLoginForm');
             const data = Object.fromEntries(new FormData(form));
 
-            fetch(`${URL}/api/auth/login`, {
+            for (x in data) {
+                if (data[x] == '') {
+                    return Swal.fire({
+                        icon: 'error',
+                        title: 'Empty field found',
+                        text: 'Please fill out ' + x
+                    })
+                }
+            }
+
+            fetch(`${URL}/api/auth/login?userType=company`, {
                 headers: {
                     'Content-Type': 'application/json',
                 },
@@ -111,7 +119,7 @@
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
-                        title: 'Login Successful as ' + data.data.first_name,
+                        title: 'Login Successful as ' + data.data.name,
                         showConfirmButton: false,
                         timer: 2000
                     })
