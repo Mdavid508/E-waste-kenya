@@ -92,6 +92,11 @@
           </p>
         </div>
       </div>
+      <div class="row">
+        <div class="container">
+          <p>{{ gadget.description }}</p>
+        </div>
+      </div>
     </div>
     <div class="container pt-3">
       <p class="font-weight-bold">Similar Gadgets</p>
