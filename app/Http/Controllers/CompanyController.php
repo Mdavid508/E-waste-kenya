@@ -33,6 +33,7 @@ class CompanyController extends Controller
         //validate the password and email so that the password is consistent and email is not duplicated
         $pass1 = $request->password;
         $cPass = $request->cPassword;
+        
         if($pass1 != $cPass){
             return response()->json([
                 'success'=> false,

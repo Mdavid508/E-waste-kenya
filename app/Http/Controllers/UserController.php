@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Company;
 
 class UserController extends Controller
 {
@@ -155,6 +156,30 @@ class UserController extends Controller
          
         $email = $request->email;
         $password = $request->password;
+
+        if($request->query('userType') && $request->query('userType')){
+            $company = Company::where('email', $email)->first();
+            if(!$company){
+                return response()->json([
+                    'success'=>false,
+                    'message'=>'No company with the give email was found.'
+                ]);
+            }
+            if($company->password != $password){
+                return response()->json([
+                    'success'=>false,
+                    'message'=>'Invalid login password. Please try again.'
+                ]);
+            }
+
+            return response()->json([
+                'success'=>true,
+                'message'=>'Login successful',
+                'data'=>$company
+            ]);
+
+        }
+        
         $user = User::where('email',$email)->first();
 
         if(!$user){

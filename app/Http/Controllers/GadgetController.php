@@ -14,8 +14,20 @@ class GadgetController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        //search for a gadget
+        if($request->query('q') && $request->query('q')!=''){
+            $searchString = $request->query('q');
+            $gadgets = Gadget::where(function ($query) use ($searchString){
+                $query->where('name','LIKE',"%$searchString%");
+            })->get();
+            
+            return response()->json([
+                'success'=>true,
+                'data'=>$gadgets
+            ]);
+        }
         //Get all gadgets in the database        
         $gadgets = Gadget::with('images')->get();
         return response()->json([
