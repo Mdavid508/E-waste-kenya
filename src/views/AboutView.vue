@@ -8,7 +8,7 @@
     </p>
   </div>
 
-  <footer-view/>
+  <footer-view :absolute="true"/>
 </template>
 <script>
 import NavBar from './NavBar.vue'

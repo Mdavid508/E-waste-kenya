@@ -70,8 +70,8 @@ h1 {
 
 @media only screen and (min-width:768px) {
     .m-container {
-        width: 428px;
-        height: 435px;
+        width: 550px;
+        height: 470px;
         padding: 10px;
         margin-top: 25px;
         border-radius: 25px;
@@ -95,6 +95,10 @@ h1 {
 
 .m-height {
     height: 330px;
+}
+
+.body-view {
+    background-color: #dee2e6;
 }
 
 .simmilar-gadget-height,
@@ -139,4 +143,21 @@ h1 {
     .contact-link {
         display: none;
     }
+}
+
+.image-preview {
+    width: 150px;
+    min-height: 150px;
+    border: 2px solid #ddd;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.image-preview__image {
+    display: none;
+    width: 100%;
 }

@@ -53,7 +53,7 @@ const routes = [{
     },
     {
         path: '/feed/:feedId',
-        name: 'viewpage',
+        name: 'FeedView',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
@@ -71,6 +71,13 @@ const routes = [{
         name: 'companyLogin',
         component: () =>
             import ('../views/CompanyLogin.vue')
+    },
+    {
+        path: '/post',
+        name: 'postview',
+        component: () =>
+            import ('../views/PostView.vue')
+
     }
 ]
 

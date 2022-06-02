@@ -129,10 +129,9 @@
         <a href="/login" class="text-white ml-1">Login</a>
       </div>
     </div>
-    <footer-view />
   </div>
 
-  <footer-view />
+  <footer-view :absolute="true"/>
 </template>
 
 <script>

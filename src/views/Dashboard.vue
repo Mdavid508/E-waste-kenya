@@ -39,7 +39,7 @@
 </div>
 <div class="container-fluid">
     <div class="row py-3 m-bg-secondary">
-        <div class="col-lg-3 col-3 mr-auto py-3 d-flex flex-column align-items-center justify-content-center bg-white m-2 rounded">
+        <div class="col-lg-3 col-3 mr-auto py-3 d-flex flex-column align-items-center justify-content-center bg-white m-2 rounded" @click="post">
             <img src="/img/desktops-and-printers.jpg" alt="Desktop and printers" />
             <small class="font-weight-bold">Desktops & Printers</small>
         </div>
@@ -85,5 +85,10 @@
 /*eslint-disable*/
 export default {
   name: "DashBoard",
+  methods:{
+      post(){
+          this.$router.push('/post')
+      }
+  }
 };
 </script>

@@ -112,7 +112,7 @@
       </div>
     </div>
   </div>
-  <footer-view />
+  <footer-view :absolute="true" />
 </template>
 
 <script>
